@@ -22,9 +22,9 @@
     <p>Já me livrei da maldição</p>
     <!-- JavaScript -->
     <script>
-        var n1 = Number.parseFloat(window.prompt('Digite um numero: ')) // recebe string
-        var n2 = Number.parseFloat(window.prompt('Digite outro número: ')) //recebe string
-        var s = n1 + n2
+        var n1 = window.prompt('Digite um numero: ') // recebe string
+        var n2 = window.prompt('Digite outro número: ') //recebe string
+        var s = Number(n1) + Number(n2)
         window.alert('A soma dos valores é ' + s) //Concatenação
         // + serve para adição e para concatenação
     </script>
