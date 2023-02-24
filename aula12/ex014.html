@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 97vw;
+            height: 95vh;
+            font-family: Arial, Helvetica, sans-serif;
+            /* background-color: #D1C093; */
+        }
+        h1{
+            text-align: center;
+            margin: 30px;
+            color: white;
+        }
+        section{
+            position: relative;
+            background-color: white;
+            width: 60vw;
+            height: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.355);
+        }
+        section p{
+            text-align: center;
+            padding: 15px;
+        }
+        section img{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 55%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <section>
+        <p>Agora são 14 horas.</p>
+    </section>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var cor = window.document.getElementsByTagName('BODY')[0]
+        var secao = window.document.getElementsByTagName('section')[0]
+        var paragrafo = window.document.getElementsByTagName('p')[0]
+        paragrafo.innerText = `Agora são ${hora} horas`
+        if (hora < 12) {
+            cor.style.background = '#D1C093'
+            secao.innerHTML += '<img src="imagens/manha.jpg" alt="manhã">'
+        } else if (hora < 18){
+            cor.style.background = '#A57660'
+            secao.innerHTML += '<img src="imagens/tarde.jpg" alt="manhã">'
+        } else {
+            cor.style.background = '#494A4B'
+            secao.innerHTML += '<img src="imagens/noite.jpg" alt="manhã">'
+        }
+    </script>
+</body>
+</html>
