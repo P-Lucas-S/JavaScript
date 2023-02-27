@@ -12,12 +12,21 @@
         <h1>Verificador de Idade</h1>
     </header>
     <section>
-        <label for="inasc">Ano de Nascimento: </label><input type="number" name="nasc" id="inasc" required> <br>
+        <p>
+            <label for="inasc">Ano de Nascimento: </label>
+            <input type="number" name="nasc" id="inasc" required>
+        </p>
 
-        <label for="sex">Sexo: </label> <input type="radio" name="sex" id="imas" value="masc" checked> Masculino
-        <input type="radio" name="sex" id="ifem" value="fem"> Feminino <br>
+        <p>Sexo:
+            <input type="radio" name="sex" id="imas" checked> 
+            <label for="imas">Masculino</label>
+            <input type="radio" name="sex" id="ifem">
+            <label for="ifem">Feminino</label>
+        </p>
 
-        <input type="submit" value="Verificar" onclick="idade()">
+        <p>
+            <input type="submit" value="Verificar" onclick="idade()">
+        </p>
 
         <div id="msg">
             Preencha os dados acima para ver o resultado!
