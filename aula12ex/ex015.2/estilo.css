@@ -17,6 +17,14 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
+section > div#res > img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
 footer {
     color: white;
     text-align: center;
