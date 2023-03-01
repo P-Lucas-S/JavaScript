@@ -9,13 +9,13 @@ function verificar()  {
         var fsex = document.getElementsByName('radisex')
         var idade = ano - Number(fano.value)
         var genero = ''
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        var img = document.createElement('img') //Cria uma tag
+        img.setAttribute('id', 'foto') //cria um atributo
         if (fsex[0].checked) {
             genero = 'Homem'
             if (idade >= 0 && idade < 10) {
                 //Criança
-                img.setAttribute('src', 'imagens/menino.jpg')
+                img.setAttribute('src', 'imagens/menino.jpg') //Cria um atributo
             } else if (idade < 21) {
                 //Jovem
                 img.setAttribute('src', 'imagens/adolescenteh.jpg')
@@ -42,8 +42,8 @@ function verificar()  {
                 img.setAttribute('src', 'imagens/velha.jpg')
             }
         }
-        res.style.textAlign = 'center'
+        res.style.textAlign = 'center' //Manipula o CSS
         res.innerHTML = `Detectamos ${genero} com ${idade} anos`
-        res.appendChild(img)
+        res.appendChild(img) // Cria um child com os atributos anteriormente formatados
     }
 }
